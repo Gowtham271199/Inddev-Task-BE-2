@@ -16,6 +16,9 @@ app.use(express.json()); // Parse JSON bodies
 
 // Use routes
 app.use('/api/users', userRoutes);
+app.get('/', (req, res) => {
+    res.send('server running')
+  })
 
 const PORT = process.env.PORT || 5000;
 
